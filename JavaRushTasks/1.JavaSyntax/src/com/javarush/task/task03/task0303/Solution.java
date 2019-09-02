@@ -1,0 +1,19 @@
+package com.javarush.task.task03.task0303;
+
+/* 
+Обмен валют
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        System.out.println(convertEurToUsd(50, 23.4));
+        System.out.println(convertEurToUsd(4660, 21.4));
+
+    }
+
+    public static double convertEurToUsd(int eur, double course) {
+        double sumInUsd = eur * course;
+        return sumInUsd;
+
+    }
+}
