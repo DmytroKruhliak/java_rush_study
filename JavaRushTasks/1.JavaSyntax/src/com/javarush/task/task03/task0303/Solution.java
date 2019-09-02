@@ -12,8 +12,7 @@ public class Solution {
     }
 
     public static double convertEurToUsd(int eur, double course) {
-        double sumInUsd = eur * course;
-        return sumInUsd;
+        return eur * course;
 
     }
 }
