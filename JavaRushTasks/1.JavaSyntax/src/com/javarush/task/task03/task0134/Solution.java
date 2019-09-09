@@ -1,4 +1,4 @@
-package com.javarush.task.task01.task0134;
+package com.javarush.task.task03.task0134;
 
 /* 
 Набираем воду в бассейн
