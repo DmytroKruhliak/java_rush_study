@@ -9,24 +9,22 @@ import java.io.InputStreamReader;
 
 public class Solution {
 
-    private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
 
 
     public static void main(String[] args) throws Exception {
 
-        int[] arrayOfNumbers = new int[3];
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        for (int i = 0; i < arrayOfNumbers.length; i++) {
-            arrayOfNumbers[i] = Integer.parseInt(br.readLine());
-        }
+        int a = Integer.parseInt(br.readLine());
+        int b = Integer.parseInt(br.readLine());
+        int c = Integer.parseInt(br.readLine());
 
-        ifEquals(arrayOfNumbers[0], arrayOfNumbers[1], arrayOfNumbers[2]);
+        havePair(a, b, c);
     }
 
-    private static void ifEquals(int a, int b, int c) {
+    public static void havePair(int a, int b, int c) {
 
-        if ((a == b) && (a == c)) {
+        if ((a == b) && (b == c)) {
             System.out.println(a + " " + b + " " + c);
         } else if (a == b) {
             System.out.println(a + " " + b);
@@ -35,6 +33,7 @@ public class Solution {
         } else if (c == a) {
             System.out.println(c + " " + a);
         }
+
 
     }
 }
