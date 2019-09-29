@@ -16,7 +16,6 @@ public class Solution {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int maxValue = Integer.MIN_VALUE;
         int[] arrOfNumb = new int[4];
-
         for (int i = 0; i < arrOfNumb.length; i++) {
             arrOfNumb[i] = Integer.parseInt(br.readLine());
             if (arrOfNumb[i] > maxValue) {
