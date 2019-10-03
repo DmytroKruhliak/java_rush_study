@@ -14,7 +14,7 @@ public class Solution {
                 System.out.print((a * b) + " ");
                 b++;
             }
-            System.out.println("");
+            System.out.println();
             a++;
             b = 1;
         }
