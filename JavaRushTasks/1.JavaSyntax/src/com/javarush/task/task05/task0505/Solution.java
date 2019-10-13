@@ -8,7 +8,7 @@ public class Solution {
     public static void main(String[] args) {
         Cat cat1 = new Cat("Barsik",5,4,200);
         Cat cat2 = new Cat("Murzik",7,6,190);
-        Cat cat3 = new Cat("Rizhik",4,5,201);
+        Cat cat3 = new Cat("Rizhik",5,5,201);
         System.out.println(cat1.fight(cat2));
         System.out.println(cat2.fight(cat3));
         System.out.println(cat3.fight(cat1));
