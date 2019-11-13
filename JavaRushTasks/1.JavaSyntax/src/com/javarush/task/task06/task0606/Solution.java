@@ -19,11 +19,10 @@ public class Solution {
     }
 
     public static void getCount(int inputNumber) {
-        int temp = inputNumber;
         String getLength = String.valueOf(inputNumber);
         int divider = 10;
 
-        for (int i = 0; i <= getLength.length(); i++) {
+        while (true) {
             int resByModule = (inputNumber % divider); //divider is increase by order of magnitude every cycle step
 
             if (resByModule / (divider / 10) % 2 == 0) {
@@ -31,9 +30,10 @@ public class Solution {
             } else {
                 odd++;
             }
-            if (resByModule == inputNumber) {
+            if (divider > inputNumber) {
                 break;
             }
+
             divider *= 10;
         }
 
