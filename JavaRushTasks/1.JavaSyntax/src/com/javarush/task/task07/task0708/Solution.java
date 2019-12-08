@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 
 /* 
 Самая длинная строка
@@ -15,13 +17,20 @@ public class Solution {
 
     public static void main(String[] args) throws Exception {
         //напишите тут ваш
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<String> arrayList = new ArrayList<>();
+        initArrayList(arrayList);
 
-        for (int i = 0; i < 5; i++) {
-            arrayList.add(br.readLine());
-        }
+
         System.out.println(Arrays.toString(arrayList.toArray()));
 
+    }
+
+    public static void initArrayList(List<String> list) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int i = 0;
+        while(5 > i) {
+            list.add(br.readLine());
+            i++;
+        }
     }
 }
