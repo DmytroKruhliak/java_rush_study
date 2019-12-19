@@ -12,6 +12,7 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
         String[] array = arrInit();
+
         for (int i = array.length; i > 0; i--) {
             System.out.println(array[i-1]);
         }
