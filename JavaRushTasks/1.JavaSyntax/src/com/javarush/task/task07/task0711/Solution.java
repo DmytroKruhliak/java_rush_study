@@ -16,6 +16,8 @@ public class Solution {
 
         fillArrayList(arrayList);
 
+        customShuffle(arrayList);
+
         for (String s : arrayList) {
             System.out.println(s);
         }
@@ -31,7 +33,9 @@ public class Solution {
         } while (i < 5);
     }
 
-    public static void shuffle(ArrayList<String> arrayList) {
-
+    public static void customShuffle(ArrayList<String> arrayList) {
+        for (int i = 0; i < 13; i++) {
+            arrayList.add(0,arrayList.remove(4));
+        }
     }
 }
