@@ -9,9 +9,10 @@ import java.util.ArrayList;
 public class Solution {
     public static void main(String[] args) {
         ArrayList<String> strings = new ArrayList<>();
-        strings.add("роза");
-        strings.add("лоза");
-        strings.add("лира");
+
+        strings.add("роза");// 0
+        strings.add("лоза");// 1
+        strings.add("лира");// 2
 
         strings = fix(strings);
 
@@ -22,20 +23,23 @@ public class Solution {
 
     public static ArrayList<String> fix(ArrayList<String> strings) {
         //напишите тут ваш код
-        int i = 0;
-        for (String s : strings) {
+        ArrayList<String> list = new ArrayList<>();
+
+        for (String s : strings ) {
             if (containsL(s) && containsR(s)) {
-                i++;
-            } else if (containsR(s)) {
-                strings.remove(s);
+                list.add(s);
             } else if (containsL(s)){
-                strings.add(s);
+                list.add(s);
+                list.add(s);
+            } else if (!containsR(s)) {
+                list.add(s);
             }
         }
-        return strings;
+
+        return list;
     }
 
-    public static boolean containsR(String s) {
+    public static boolean containsR(String s) { // delete
         char[] charsArr = s.toCharArray();
         boolean result = false;
         for (char c : charsArr) {
@@ -47,9 +51,9 @@ public class Solution {
         return result;
     }
 
-    public static boolean containsL(String s) {
+    public static boolean containsL(String s) { //double
         char[] charsArr = s.toCharArray();
-        boolean result = true;
+        boolean result = false;
         for (char c : charsArr) {
             if (c == 'л') {
                 result = true;
