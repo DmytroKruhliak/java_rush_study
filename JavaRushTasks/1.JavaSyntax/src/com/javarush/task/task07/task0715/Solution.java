@@ -18,7 +18,6 @@ public class Solution {
         exactlyAfter(list, "раму");
 
         printList(list);
-
     }
 
     public static void exactlyAfter(ArrayList<String> list, String s) {
