@@ -36,12 +36,8 @@ public class Solution {
 //        7
 //        8
 //        9
-        int size = list.size() - 1;
-        for (int i = size; i >= 0; i--) {
-            String currentStr = list.get(i);
-            list.add(currentStr);
-            list.add(currentStr);
-            list.remove(i);
+        for (int i = 0; i < list.size(); i += 2) {
+            list.add(i + 1, list.get(i));
         }
         return list;
     }
